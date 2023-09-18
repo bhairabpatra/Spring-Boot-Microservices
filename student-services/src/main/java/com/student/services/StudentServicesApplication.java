@@ -1,0 +1,20 @@
+package com.student.services;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+public class StudentServicesApplication {
+	@Bean
+	@Primary
+	public RestTemplate getRestTemplate(){
+		return new RestTemplate();
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(StudentServicesApplication.class, args);
+	}
+
+}
